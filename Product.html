@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+
+      padding: 5px;
+      align-items: center;
+    }
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+
+    .labelWidth {
+      width: 40%;
+    }
+
+    .valueWidth {
+      width: 60%;
+    }
+
+    .header {
+      background-color: #c7222a;
+      color: #ffffff;
+      height: 115px;
+    }
+
+    .header h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      padding-top: 25px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 1%;
+      padding: 0;
+      text-align: left;
+      width: 60%;
+      position: relative;
+      left: 20%;
+    }
+
+    .menu li {
+      padding: 8px;
+      margin-bottom: 7px;
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .menu li:hover {
+      background-color: #ee6f6fe7;
+    }
+
+    main {
+      padding: 15px;
+      color: #000000;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .footer {
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: left;
+      font-size: 8px;
+      padding: 10px;
+    }
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>
+      <div><a href="./main_layout.html"> Your Product</a></div>
+    </h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-s-12">
+      <form>
+        <table style=" width : 90% " align="center">
+          <tr>
+            <td class="labelWidth">
+              <label for="name">Salutation</label>
+            </td>
+            <td colspan="3" class="valueWidth">
+              <input type="text" name="name" id="name" value="Mr." disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="fname">First Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="fname" id="fname" value="Kiran" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Last Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="lname" id="lname" value="Shinde" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourproduct">Your Product</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yourproduct" id="yourproduct" value="ABSLI Gauranteed Milestone Plan" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yoursum">Your Sum Assured</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yoursum" id="yoursum" value="5,00,00,000" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourpremium">Premium Payable</label>
+            </td>
+            <td colspan="3">
+              <p><span id="demo"></span></p>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="3">
+              <div class="slidecontainer">
+                <input type="range" min="15000" max="10000000" value="3500000" class="slider" id="myRange">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="option">Option</label>
+            </td>
+            <td colspan="3">
+              <select name="option" id="option">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D" selected>D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="prempayterm">Premium paying term</label>
+            </td>
+            <td>
+              <select name="prempayterm" id="prempayterm" disabled>
+                <option value="10">10 Yrs</option>
+                <option value="20">20 Yrs</option>
+                <option value="30">30 Yrs</option>
+                <option value="40">40 Yrs</option>
+              </select>
+            </td>
+            <td>
+              <label for="benefitterm">Benefit term</label>
+            </td>
+            <td>
+              <select name="benefitterm" id="benefitterm" disabled>
+                <option value="20Y">20 Yrs</option>
+                <option value="30Y">30 Yrs</option>
+                <option value="40Y">40 Yrs</option>
+                <option value="50Y">50 Yrs</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourCountry">Your Country</label>
+            </td>
+            <td colspan="3">
+              <select name="yourCountry" id="yourCountry" disabled>
+                <option value="india">India</option>
+                <option value="US">United States</option>
+                <option value="Canada">Canada</option>
+              </select>
+            </td>
+          </tr>
+          <!-- <tr><td colspan="4"></td></tr>
+           <tr>
+             <td>
+               <label for="yourState" >Your State</label>
+             </td>
+             <td colspan="3">
+               <select name="yourState" id="yourState" disabled>
+                 <option value="Maharashtra">Maharashtra</option>
+                 <option value="Punjab">Punjab</option>
+                 <option value="Gujarat">Gujarat</option>
+             </select>
+             </td>
+            </tr> 
+            <tr><td colspan="4"></td></tr>
+           <tr>
+             <td>
+               <label for="yourCity" >Your City</label>
+             </td>
+             <td colspan="3">
+               <select name="yourCity" id="yourCity" disabled>
+                 <option value="Mumbai">Mumbai</option>
+                 <option value="Pune">Pune</option>
+                 <option value="Nagpur">Nagpur</option>
+             </select>
+             </td>
+            </tr>  -->
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="citizenship">Are you holding citizenship of any other country</label>
+            </td>
+            <td colspan="3">
+              <select name="citizenship" id="citizenship">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="taxresident">Are you a tax resident of any other country</label>
+            </td>
+            <td colspan="3">
+              <select name="taxresident" id="taxresident">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pep">PEP - State whether the proposer or the life to be insured<br> align or Nominee are
+                politically exposed</label>
+            </td>
+            <td colspan="3">
+              <select name="pep" id="pep">
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+          <tr>
+            <td colspan="4" align="center">
+              <a href="./personalDetails.html" class="mybutton">Next</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    Aditya Birla Sun Life Insurance Company Ltd.
+  </div>
+
+
+  <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+      output.innerHTML = this.value;
+    }
+  </script>
+
+</body>
+
+</html>

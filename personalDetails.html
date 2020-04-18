@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 1px;
+    }
+
+
+    .header {
+      background-color: #c7222a;
+      color: #ffffff;
+      height: 114px;
+    }
+
+    .header h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      padding-top: 25px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 1%;
+      padding: 0;
+      text-align: left;
+      width: 60%;
+      position: relative;
+      left: 20%;
+    }
+
+    .menu li {
+      padding: 8px;
+      margin-bottom: 7px;
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .menu li:hover {
+      background-color: #ee6f6fe7;
+    }
+
+    main {
+      padding: 15px;
+      color: #000000;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .footer {
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: left;
+      font-size: 8px;
+      padding: 10px;
+    }
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <div class="header">
+    <h1>
+      <div><a href="./main_layout.html"> Personal Details</a></div>
+    </h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-s-12">
+      <form>
+        <table style="width : 90%" align="center">
+          <tr>
+            <td>
+              <label for="mname">Middle Name</label>
+            </td>
+            <td>
+              <input type="text" name="mname" id="mname">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pan">PAN</label>
+            </td>
+            <td>
+              <input type="text" name="pan" id="pan" value="KDKDS1234H" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="bankaccount">Bank Account #</label>
+            </td>
+            <td>
+              <input type="text" name="bankaccount" id="bankaccount">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="accounttype">Account Type</label>
+            </td>
+            <td>
+              <select name="accounttype" id="accounttype" disabled>
+                <option value="Savings">Savings</option>
+                <option value="Current">Current</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="annualincome">Annual Income</label>
+            </td>
+            <td>
+              <select name="annualincome" id="annualincome" disabled>
+                <option value="10 - 20 lacs">10 - 20 lacs</option>
+                <option value="20 - 30 lacs">20 - 30 lacs</option>
+                <option value="30 - 40 lacs">30 - 40 lacs</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="qualification">Qualification</label>
+            </td>
+            <td>
+              <select name="qualification" id="qualification" disabled>
+                <option value="Graduate">Graduate</option>
+                <option value="Post-Graduate">Post-Graduate</option>
+                <option value="PHD">PHD</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="occupation">Occupation</label>
+            </td>
+            <td>
+              <select name="occupation" id="occupation" disabled>
+                <option value="Service">Service</option>
+                <option value="Self-employed">Self-employed</option>
+                <option value="Pension">Pension</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="employername">Employer Name</label>
+            </td>
+            <td>
+              <input type="text" name="employername" id="employername" value="Aditya Birla Capital" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="designation">Designation</label>
+            </td>
+            <td>
+              <input type="text" name="designation" id="designation">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+        </table>
+        <table style=" width : 90% ;border:1px solid black" align="center">
+          <tr>
+            <td>
+              <label for="goodhealth">1. Are you presently in good health</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" checked />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="renewal"> 2. Has any application, reinstatement or renewal for life, medical or health
+                insurance on your
+                life with ABSLI or any other insurance company ever been declined, postponed or
+                accepted with an increased premium or an exclusion applied due to health reasons ?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="diagnosed"> 3. Have you ever been diagnosed with or under investigation for any of the
+                following
+                conditions: Cancer, Carcinoma in Stu, Tumor or growth, Chest Pain, Palpitations or
+                Shortness of breath, Heart Attack or Heart related disorder or disease, High Cholesterol,
+                High Blood Pressure, Stroke or Transient Ischemic Attack (TIA), Diabetes, Mellitus, Kidney
+                disease or failure, Blood disorder, Respiratory or lung disease, Hepatitis or liver disease,
+                Mental or neurological disorder, HIV infection or AIDS?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="family"> 4. Do you have 2 of your immediate family members (parents, brother or sister)
+                Diagnosed
+                with /suffering from / have died due to any hereditary or chronic disorder, heart ailment,
+                stroke, high blood pressure, hypertension, diabetes, Mellitus, High Blood Sugar, Cancer,
+                Kidney disease, Paralysis any other disease not stated above prior to age 60?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="medicaltreat"> 5. In the last 5 years have you received or been advised to undergo any medical
+                or surgical
+                treatment or hospitalization or consultation or undergone any medical investigation(s) or
+                test(s) with any abnormal results for any medical condition or disability or symptoms other
+                than minor flu, cold and/or influenza?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="medicaltreat"> 6. Do you consume or have ever consumed any narcotic substances? Or do you
+                consume
+                hard liquor more than 1,000 ml/week or more than 10 cigarettes per day ?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+        </table>
+        <table align="center">
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <a href="./nomineeOtherDetails.html" class="mybutton">Next</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    Aditya Birla Sun Life Insurance Company Ltd.
+  </div>
+
+
+
+</body>
+
+</html>

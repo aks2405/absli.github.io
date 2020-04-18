@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 1px;
+    }
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+      font-size: 14px;
+    }
+
+    .header {
+      background-color: #c7222a;
+      color: #ffffff;
+      height: 114px;
+    }
+
+    .header h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      padding-top: 25px;
+    }
+
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      margin-top: 1%;
+      padding: 0;
+      text-align: left;
+      width: 60%;
+      position: relative;
+      left: 20%;
+    }
+
+    .menu li {
+      padding: 8px;
+      margin-bottom: 7px;
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+    .menu li:hover {
+      background-color: #ee6f6fe7;
+    }
+
+    main {
+      padding: 15px;
+      color: #000000;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .footer {
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: left;
+      font-size: 8px;
+      padding: 10px;
+    }
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <div class="header">
+    <h1>
+      <div><a href="./main_layout.html"> Nominee & other details </a></div>
+    </h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-s-12">
+      <form>
+        <table style="width : 90%" align="center">
+          <tr>
+            <td>
+              <label for="nomineename">Nominee Name</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="nomineename" id="nomineename">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="relationship">Nominee relationship with Insured</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="relationship" id="relationship">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="nominationshare">Nomination Share</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="nominationshare" id="nominationshare">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dob">**Date of Birth</label>
+            </td>
+            <td colspan="2">
+              <input type="date" id="dob" name="dob">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="afname">Appointee First Name</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="afname" id="afname">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="alname">Appointee Last Name</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="alname" id="alname">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dob1">**Date of Birth</label>
+            </td>
+            <td colspan="2">
+              <input type="date" id="dob1" name="dob1">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="rnominee">Relationship of Appointee with Nominee</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="rnominee" id="rnominee">
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td>
+              <label for="ela">eIA account #</label>
+            </td>
+            <td colspan="2">
+              <input type="text" name="ela" id="ela">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="noaccount">Don't have one </label><br>
+              <label for=""> (Select service provider) </label>
+            </td>
+            <td colspan="2">
+              <select name="noaccount" id="noaccount">
+                <option value="NIPR">National Insurance Policy Repository</option>
+                <option value="CIPR">Central Insurance Policy Repository</option>
+                <option value="KARVY" selected>KARVY Insurance Repository Limited</option>
+                <option value="CAMS">CAMS Repository Services Limited</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <input type="checkbox" name="agreement" id="agreement" value="yes-sign-me-up" checked>
+              <label for="agreement">
+                Section 41 & 45 of the insurance Act 1938
+                I agree, that all the details mentioned in the application form are correct and I have reviewed it
+                thoroughly.</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+        <table style=" width : 90% ;border:1px solid black" align="center">
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="text" name="emailid1" id="emailid1" value="kiran.shinde@adityabirlacapital.com" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="iconsent">
+                I agree, that all the details mentioned in the application form are correct and I have reviewed it
+                thoroughly.
+              </label>
+            </td>
+            <td align="right">
+              <!-- <a href="" class="mybutton">I consent</a> -->
+              <input type="button" value="I consent" onclick="" class="mybutton">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="text" name="contact1" id="contact1" value="9911991197" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="3SP">I wish to receive information about various products and services from ABSLI or
+                through its third party service providers on the aforesaid telephone number (s),
+                whether these numbers are registered.</label>
+            </td>
+            <td align="right">
+              <!-- <a href="" class="mybutton">I consent</a> -->
+              <input type="button" value="I consent" onclick="" class="mybutton">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="file" id="img" name="img" accept="image/*">
+              <input type="file" id="doc" name="doc" accept="file_extension*">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" name="agreement" id="agreement" value="yes-sign-me-up1" checked>
+              <label for="agreement">
+                I accept/ Agree</label>
+            </td>
+          </tr>
+        </table>
+
+        <table align="center">
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <a href="./reviewAccept.html" class="mybutton">Next</a>
+            </td>
+          </tr>
+        </table>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    Aditya Birla Sun Life Insurance Company Ltd.
+  </div>
+
+  <script type="text/javascript">
+
+    function reply_click(element) {
+      document.getElementById('enterOTP').value = element.getAttribute('data-generate-OTP');
+    }
+
+  </script>
+
+</body>
+
+</html>

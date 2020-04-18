@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .mylabel {
+      text-decoration: underline;
+      text-decoration-color: blue;
+      color: black;
+    }
+
+    .labelWidth {
+      width: 40%;
+    }
+
+    .valueWidth {
+      width: 60%;
+    }
+
+    tr {
+      width: 40%;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 5px;
+    }
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+      font-size: 14px;
+    }
+
+    .header {
+      background-color: #c7222a;
+      color: #ffffff;
+      height: 114px;
+    }
+
+    .header h1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      padding-top: 25px;
+    }
+
+
+    main {
+      padding: 15px;
+      color: #000000;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .footer {
+      background-color: #c7222a;
+      color: #ffffff;
+      text-align: left;
+      font-size: 8px;
+      padding: 10px;
+    }
+
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+    @media only screen and (min-width: 600px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>
+      <div><a href="./main_layout.html"> Review & Acceptance</a></div>
+    </h1>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-s-12">
+      <form>
+        <table style="width : 90%" align="center">
+          <tr>
+            <td class="labelWidth">
+              <label for="name">Salutation</label>
+            </td>
+            <td colspan="3" class="valueWidth">
+              <input type="text" name="name" id="name" value="Mr." disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="fname">First Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="fname" id="fname" value="Kiran" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Last Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="lname" id="lname" value="Shinde" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourproduct">Your Product</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yourproduct" id="yourproduct" value="ABSLI Gauranteed Milestone Plan" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yoursum">Your Sum Assured</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yoursum" id="yoursum" value="5,00,00,000" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourpremium">Premium Payable</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yourpremium" id="yourpremium" value="3500000" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="prempayterm">Premium paying term</label>
+            </td>
+            <td>
+              <input type="text" name="prempayterm" id="prempayterm" value="10 Yrs" disabled>
+            </td>
+            <td>
+              <label for="benefitterm">Benefit term</label>
+            </td>
+            <td>
+              <input type="text" name="benefitterm" id="benefitterm" value="20 Yrs" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="yourCountry">Your Country</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="yourCountry" id="yourCountry" value="India" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="citizenship">Are you holding citizenship of any other country</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="citizenship" id="citizenship" value="No" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="taxresident">Are you a tax resident of any other country</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="taxresident" id="taxresident" value="No" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pep">PEP - State whether the proposer or the life to be insured or Nominee are politically
+                exposed</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="pep" id="pep" value="No" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="mname">Middle Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="mname" id="mname" value="Dnyaneshwar" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="pan">PAN</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="pan" id="pan" value="KDKDS1234H" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="bankaccount">Bank Account #</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="bankaccount" id="bankaccount" value="0012 3456 789012" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="accounttype">Account Type</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="accounttype" id="accounttype" value="Savings" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="annualincome">Annual Income</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="annualincome" id="annualincome" value="10 - 20 lacs" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="qualification">Qualification</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="qualification" id="qualification" value="Post-Graduate" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="occupation">Occupation</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="Occupation" id="Occupation" value="Service" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="employername">Employer Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="employername" id="employername" value="Aditya Birla Capital" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="designation">Designation</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="designation" id="designation" value="Chief Manager" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+        <table style="width : 90% ;border:1px solid black" align="center">
+          <tr>
+            <td>
+              <label for="goodhealth">1. Are you presently in good health</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" checked />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="renewal"> 2. Has any application, reinstatement or renewal for life, medical or health
+                insurance on your
+                life with ABSLI or any other insurance company ever been declined, postponed or
+                accepted with an increased premium or an exclusion applied due to health reasons ?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="diagnosed"> 3. Have you ever been diagnosed with or under investigation for any of the
+                following
+                conditions: Cancer, Carcinoma in Stu, Tumor or growth, Chest Pain, Palpitations or
+                Shortness of breath, Heart Attack or Heart related disorder or disease, High Cholesterol,
+                High Blood Pressure, Stroke or Transient Ischemic Attack (TIA), Diabetes, Mellitus, Kidney
+                disease or failure, Blood disorder, Respiratory or lung disease, Hepatitis or liver disease,
+                Mental or neurological disorder, HIV infection or AIDS?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="family"> 4. Do you have 2 of your immediate family members (parents, brother or sister)
+                Diagnosed
+                with /suffering from / have died due to any hereditary or chronic disorder, heart ailment,
+                stroke, high blood pressure, hypertension, diabetes, Mellitus, High Blood Sugar, Cancer,
+                Kidney disease, Paralysis any other disease not stated above prior to age 60?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="medicaltreat"> 5. In the last 5 years have you received or been advised to undergo any medical
+                or surgical
+                treatment or hospitalization or consultation or undergone any medical investigation(s) or
+                test(s) with any abnormal results for any medical condition or disability or symptoms other
+                than minor flu, cold and/or influenza?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="medicaltreat"> 6. Do you consume or have ever consumed any narcotic substances? Or do you
+                consume
+                hard liquor more than 1,000 ml/week or more than 10 cigarettes per day ?</label>
+            </td>
+            <td>
+              <label class="switch1">
+                <input class="switch1-input" type="checkbox" />
+                <span class="switch1-label" data-on="Yes" data-off="No"></span> <span class="switch1-handle"></span>
+              </label>
+            </td>
+          </tr>
+        </table>
+        <table style="width : 90%" align="center">
+          <tr>
+            <td class="labelWidth">
+              <label for="nomineename">Nominee Name</label>
+            </td>
+            <td colspan="3" class="valueWidth">
+              <input type="text" name="nomineename" id="nomineename" value="Vedica Kiran Shinde" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="relationship">Nominee relationship with Insured</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="relationship" id="relationship" value="Daughter" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="nominationshare">Nomination Share</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="nominationshare" id="nominationshare" value="100%" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dob">**Date of Birth</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="dob" id="dob" value="31-10-2018" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="afname">Appointee First Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="afname" id="afname" value="Akshata" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="alname">Appointee Last Name</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="alname" id="alname" value="Shinde" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="dob1">**Date of Birth</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="dob1" id="dob1" value="21-05-1985" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="rnominee">Relationship of Appointee with Nominee</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="rnominee" id="rnominee" value="Daughter" disabled>
+            </td>
+          </tr>
+          <tr>
+          <tr>
+            <td>
+              <label for="ela">eIA account #</label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="ela" id="ela" value="1234 5678 9012" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="noaccount">Service Provider </label>
+            </td>
+            <td colspan="3">
+              <input type="text" name="noaccount" id="noaccount" value="KARVY" disabled>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+          </tr>
+        </table>
+
+        <table style="width : 90% ;border:1px solid black" align="center">
+          <tr>
+            <td colspan="2" align="center">
+              <label><b> kiran.shinde@adityabirlacapital.com </b></label> <br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <label for="iconsent">
+                I agree, that all the details mentioned in the application form are correct and I have reviewed it
+                thoroughly.
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <label><b> 9911991197 </b></label> <br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <label for="3SP">I wish to receive information about various products and services from ABSLI or
+                through its third party service providers on the aforesaid telephone number (s),
+                whether these numbers are registered.</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td align="center">
+              <label><b> Documents Uploaded </b></label> <br>
+              <!-- <label class="mylabel">My Photo.png</label> <br> -->
+              <a href="./img/myPic.jpg" target="_blank" class="mylabel">My Photo.jpg</a>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+
+        </table>
+        <table align="center">
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <label for="agreement">
+                Section 41 & 45 of the insurance Act 1938
+                I agree, that all the details mentioned in the application form are correct and I have reviewed it
+                thoroughly.</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">
+              <label for="agreement">
+                I accept/ Agree</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <td align="center" colspan="3">
+              <!-- <a href="" class="mybutton">Review & Accept</a> -->
+              <input type="button" value="Review and Accept" onclick="" class="mybutton">
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+        </table>
+        <table align="center">
+          <tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <td>
+            <input type="button" value="Generate OTP" onclick="generateOTP()" class="mybutton">
+            <!-- <a href="#" id="1" class="mybutton"onclick="reply_click(this)" data-generate-OTP="4 5 6 7 8 9">Generate OTP</a> -->
+          </td>
+          <td>
+            <input type="number" id="enterOTP" />
+          </td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="placeApplication">Place of application</label>
+            </td>
+            <td>
+              <input type="text" name="placeApplication" id="placeApplication">
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <td>
+              <label>
+                Illustration and Application form will be mailed to the registered e-mail id
+              </label>
+            </td>
+            <td align="center">
+              <a href="./payPremium.html" class="mybutton">Next</a>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer">
+    Aditya Birla Sun Life Insurance Company Ltd.
+  </div>
+
+  <script type="text/javascript">
+
+    // function reply_click(element)
+    // {
+    //     document.getElementById('enterOTP').value = element.getAttribute('data-generate-OTP');
+    // }    
+
+    function generateOTP() {
+      document.getElementById("enterOTP").setAttribute('value', 456789);
+
+    }
+
+  </script>
+
+</body>
+
+</html>
